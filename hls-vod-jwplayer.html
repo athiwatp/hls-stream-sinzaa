@@ -1,0 +1,27 @@
+<html>
+<head>
+  <title>HLS VOD streaming with JW Player<title>
+  <script src="https://jwpsrv.com/library/_ABCDEFGHIJKLMOPQ.js" type="text/javascript"></script>
+
+  <!--
+  ATTENTION
+  _ABCDEFGHIJKLMOPQ needs to be replaced with the hash provided at JW Player premium account player settings page
+  -->
+
+</head>
+<body>
+<div id="playerElement" />
+<script>
+  jwplayer("playerElement").setup({
+      playlist: [{
+        sources: [{
+            file: "http://159.89.200.220:8081/vod/BigBuckBunny_320x180.mp4/playlist.m3u8"
+        },{
+            file: "http://159.89.200.220:8081/vod/BigBuckBunny_320x180.mp4"
+        }]
+      }],
+      primary: 'flash'
+  });
+</script>
+</body>
+</html>
